@@ -33,6 +33,6 @@ Enter username and password to retrieve and display the Tazama token from the Ke
 The contents of the token will enable some additional buttons.
 
 Clicking any button will validate the retrieved Tazama token and claims via the auth-lib's `validateTokenAndClaims()` function.
- - The VALID button submits the token as received.
+ - The VALID button submits the token as received - this is expected to be successful.
  - The INACTIVE button is only activated if the claim "DANCE" is contained in the array of claims (it is not, by default)
- - The INVALID button injects a fake claim into the list of claims and then calls the validation function.
+ - The INVALID button injects a fake claim ('POST_V1_EVALUATE_ISO20022_PAIN_001_001_11_FAKE') into the list of claims and then calls the validation function - this is expected to fail.
