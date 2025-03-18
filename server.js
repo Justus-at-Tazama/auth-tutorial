@@ -32,7 +32,7 @@ app.post('/api/login', async (req, res) => {
     const { userId, password } = req.body;
     
     // Call authentication service
-    const response = await fetch('http://juice.chknhdnordvpn-everest.nord:3020/v1/auth/login', {
+    const response = await fetch('http://your-authentication-service-server:3020/v1/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
