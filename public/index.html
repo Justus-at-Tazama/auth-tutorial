@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth Tutorial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Authentication Demo</h1>
+    
+    <div class="form-group">
+      <label for="userId">User ID:</label>
+      <input type="text" id="userId" name="userId">
+    </div>
+    
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    
+    <button id="submitBtn">Submit</button>
+    
+    <div class="form-group response-section">
+      <label for="response">Token Response:</label>
+      <textarea id="response" readonly rows="10"></textarea>
+    </div>
+    
+    <div id="authSection" class="hidden">
+      <div class="form-group">
+        <label for="authResult">Authentication:</label>
+        <input type="text" id="authResult" readonly>
+      </div>
+      
+      <div class="button-container">
+        <div class="button-row">
+          <button id="validBtn" disabled>VALID</button>
+          <span class="button-description">Enabled because "POST_V1_EVALUATE_ISO20022_PAIN_001_001_11" is in the list of claims</span>
+        </div>
+        
+        <div class="button-row">
+          <button id="inactiveBtn" disabled>INACTIVE</button>
+          <span class="button-description">Disabled because "DANCE" is not in the list of claims</span>
+        </div>
+        
+        <div class="button-row">
+          <button id="invalidBtn" disabled>INVALID</button>
+          <span class="button-description">Enabled because "POST_V1_EVALUATE_ISO20022_PAIN_001_001_11_FAKE" has been added to the list of claims</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
